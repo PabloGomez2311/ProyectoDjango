@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block section %}
+	 <h2>Equipos</h2>
+	 <hr>
+{% endblock section %}
+
+{% block maincontent %}
+   <div>
+
+      {% for c in object_list %}
+         <a href="{% url 'team_detail' c.pk %}">
+              {{ c.name }} <br>
+         </a>
+      {% endfor %}
+    </div>
+{% endblock maincontent %}
